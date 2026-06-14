@@ -5,6 +5,7 @@ public class WorkoutSession
     public int? TemplateId { get; private set; }
     public DateTime StartedAt { get; private set; }
     public DateTime? FinishedAt { get; private set; }
+    public bool IsActive => FinishedAt is null;
     public User User { get; private set; } = null!;
     public ICollection<WorkoutExercise> Exercises { get; private set; } = [];
 
