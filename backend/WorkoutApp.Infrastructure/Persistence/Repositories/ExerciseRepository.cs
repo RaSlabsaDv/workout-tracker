@@ -8,7 +8,7 @@ public class ExerciseRepository(WorkoutContext context) : IExerciseRepository
     }
 
     public async Task<List<Exercise>> GetAllAsync(CancellationToken ct = default) =>
-        await context.Exercises.Where(e => !e.IsCustom).ToListAsync(ct);
+        await context.Exercises.Where(e => !e.IsArchived).ToListAsync(ct);
 
     public async Task<Exercise?> GetByIdAsync(int id, CancellationToken ct = default) =>
         await context.Exercises.FindAsync([id], ct);

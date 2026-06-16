@@ -31,7 +31,5 @@ public class ExerciseConfiguration : IEntityTypeConfiguration<Exercise>
             .WithOne(pr => pr.Exercise)
             .HasForeignKey(e => e.ExerciseId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        builder.HasQueryFilter(e => !e.IsArchived);
     }
 }
