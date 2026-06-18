@@ -4,5 +4,6 @@ public interface IExerciseRepository
     Task<Exercise?> GetByIdAsync(int id, CancellationToken ct = default);
     Task<List<Exercise>> GetAllAsync(CancellationToken ct = default);
     Task<List<Exercise>> GetCustomByUserIdAsync(int userId, CancellationToken ct = default);
+    Task<bool> ExistsByNameAndUserAsync(string name, int? userId, CancellationToken ct = default);
     void Remove(Exercise exercise);
 }
