@@ -8,5 +8,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 app.Run();
