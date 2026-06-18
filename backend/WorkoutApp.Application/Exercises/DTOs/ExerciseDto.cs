@@ -1,0 +1,1 @@
+public record ExerciseDto(int Id, string Name, ExerciseCategory Category);
