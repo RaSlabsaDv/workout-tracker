@@ -25,4 +25,13 @@ public class Exercise
     }
 
     public void Archive() => IsArchived = true;
+
+    public void Update(string name, ExerciseCategory category)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException("Exercise name cannot be empty.");
+
+        Name = name;
+        Category = category;
+    }
 }
