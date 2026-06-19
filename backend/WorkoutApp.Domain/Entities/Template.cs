@@ -17,4 +17,12 @@ public class Template
         UserId = userId;
         Name = name;
     }
+
+    public void UpdateName(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException("Template name cannot be empty.");
+
+        Name = name;
+    }
 }
