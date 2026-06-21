@@ -1,0 +1,1 @@
+public record ExerciseOrderDto(int TemplateExerciseId, int Order);
